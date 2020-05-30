@@ -14,7 +14,7 @@ body {
     justify-content: center;
 }
 
-p, a, label, button, input {
+p, a, label, button, input, h2 {
     font-family: 'DM Sans', sans-serif;
 }
 
@@ -62,4 +62,9 @@ button:hover {
 
 #main form, #main button[onclick="current()"] {
     margin-top: 5vh;
+}
+
+#output {
+    text-align: center;
+    padding: 5vh 0px;
 }
