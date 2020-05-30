@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MetroWeather</title>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Manrope:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div id="top">
+            <h1><a href="index.html">MetroWeather</a></h1>
+        </div>
+        <div id="main">
+            <p>Use one of the three options (Current Location, Lat/Long, or City name):</p>
+
+            <button onclick="current()">Use Current Location</button>
+
+            <form method="GET" id="lat-long-form">
+                <label for="latitude">Latitude: </label>
+                <input type="number" name="latitude"><br>
+                <label for="longitude">Longitude: </label>
+                <input type="number" name="longitude"><br>
+                <input type="submit">
+            </form>
+
+            <form method="GET" id="city-form">
+                <label for="latitude">City name: </label>
+                <input type="text" name="city"><br>
+                <label for="latitude">State/Region: </label>
+                <input type="text" name="state"><br>
+                <input type="submit">
+            </form>
+        </div>
+    </body>
+</html>
