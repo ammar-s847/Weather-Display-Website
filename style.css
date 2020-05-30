@@ -27,7 +27,7 @@ form * {
     margin: 1vh 0px;
 }
 
-button, input[type="submit"] {
+button {
     background-color: rgb(50, 72, 168);
     border: none;
     border-radius: 15px;
@@ -36,7 +36,7 @@ button, input[type="submit"] {
     cursor: pointer;
 }
 
-button:hover, input[type="submit"]:hover {
+button:hover {
     background-color: rgb(50, 35, 168);
 }
 
@@ -60,6 +60,6 @@ button:hover, input[type="submit"]:hover {
     text-align: center;
 }
 
-#main form, #main button {
-    margin-bottom: 5vh;
+#main form, #main button[onclick="current()"] {
+    margin-top: 5vh;
 }

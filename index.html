@@ -10,6 +10,7 @@
         <div id="top">
             <h1><a href="index.html">MetroWeather</a></h1>
         </div>
+
         <div id="main">
             <p>Use one of the three options (Current Location, Lat/Long, or City name):</p>
 
@@ -17,19 +18,28 @@
 
             <form method="GET" id="lat-long-form">
                 <label for="latitude">Latitude: </label>
-                <input type="number" name="latitude"><br>
+                <input type="number" id="latitude"><br>
                 <label for="longitude">Longitude: </label>
-                <input type="number" name="longitude"><br>
-                <input type="submit">
+                <input type="number" id="longitude"><br>
             </form>
+            <button onclick="lat_long()">Submit</button>
 
             <form method="GET" id="city-form">
-                <label for="latitude">City name: </label>
-                <input type="text" name="city"><br>
-                <label for="latitude">State/Region: </label>
-                <input type="text" name="state"><br>
-                <input type="submit">
+                <label for="city">City: </label>
+                <input type="text" id="city"><br>
+                <label for="country">Country: </label>
+                <input type="text" id="country"><br>
             </form>
+            <button onclick="city()">Submit</button>
+        </div>
+
+        <div id="output" style="display: none;">
+            <h2></h2>
+            <p id="temp"></p>
+            <p id="feels"></p>
+            <p id="humid"></p>
+            <p id="wind"></p>
+            <p id="desc"></p>
         </div>
     </body>
 </html>
