@@ -30,7 +30,13 @@ function coordsData(lat, long) {
             return response.json();
         }).then(data => {
             console.log(data);
-            display(data)
+            if (data.cod != 404) {
+                display(data);
+            } else {
+                document.getElementById('output').style.display = "block";
+                document.getElementById('temp').style.color = "red";
+                document.getElementById('temp').innerHTML = "City not found";
+            }
         });
 }
 
@@ -42,7 +48,13 @@ function cityData(city, country) {
         })
         .then(data => {
             console.log(data);
-            display(data)
+            if (data.cod != 404) {
+                display(data);
+            } else {
+                document.getElementById('output').style.display = "block";
+                document.getElementById('output-title').style.color = "red";
+                document.getElementById('output-title').innerHTML = "City not found";
+            }
         });
 }
 
