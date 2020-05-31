@@ -20,6 +20,8 @@ function display(data) {
     document.getElementById('desc').innerHTML = `Condition: ${desc}`;
     document.getElementById('feels').innerHTML = `Feels Like: ${Math.round(feels * 100) / 100} C`;
 
+    document.getElementById('output-title').style.color = "black";
+
     console.log(`${cityname}, ${country}, ${temp}, ${desc}, ${wind}, ${date}`);
     document.getElementById('output').style.display = "block";
 }
@@ -34,8 +36,8 @@ function coordsData(lat, long) {
                 display(data);
             } else {
                 document.getElementById('output').style.display = "block";
-                document.getElementById('temp').style.color = "red";
-                document.getElementById('temp').innerHTML = "City not found";
+                document.getElementById('output-title').style.color = "red";
+                document.getElementById('output-title').innerHTML = "City not found";
             }
         });
 }
